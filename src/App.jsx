@@ -135,7 +135,7 @@ function AuthScreen({ onAuth }) {
       <div style={{ maxWidth: 400, width: "100%", padding: "40px 24px", textAlign: "center" }}>
         <div style={{ marginBottom: 24 }}><img src={LOGO_SRC} alt="Intent & Iron" style={{ height: 60, objectFit: "contain" }} /></div>
         <div style={{ fontSize: 12, color: MUTED, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 32 }}>Momentum Tracker</div>
-        <div style={{ background: CARD, border: \`1px solid ${CARD_BORDER}\`, borderRadius: 12, padding: 24, textAlign: "left" }}>
+        <div style={{ background: CARD, border: `1px solid ${CARD_BORDER}`, borderRadius: 12, padding: 24, textAlign: "left" }}>
           <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
             <button onClick={() => { setMode("login"); setError(null); setMessage(null); }} style={{ flex: 1, padding: "8px 0", border: "none", borderRadius: 6, cursor: "pointer", fontSize: 13, fontWeight: 700, background: mode === "login" ? GOLD : "transparent", color: mode === "login" ? NAVY : MUTED }}>Sign In</button>
             <button onClick={() => { setMode("signup"); setError(null); setMessage(null); }} style={{ flex: 1, padding: "8px 0", border: "none", borderRadius: 6, cursor: "pointer", fontSize: 13, fontWeight: 700, background: mode === "signup" ? GOLD : "transparent", color: mode === "signup" ? NAVY : MUTED }}>Create Account</button>
@@ -143,13 +143,13 @@ function AuthScreen({ onAuth }) {
           <div style={{ marginBottom: 12 }}>
             <label style={{ fontSize: 11, color: MUTED, display: "block", marginBottom: 4 }}>Email</label>
             <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@email.com"
-              style={{ width: "100%", background: DARK, border: \`1px solid ${CARD_BORDER}\`, borderRadius: 8, padding: "10px 12px", color: WHITE, fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+              style={{ width: "100%", background: DARK, border: `1px solid ${CARD_BORDER}`, borderRadius: 8, padding: "10px 12px", color: WHITE, fontSize: 14, outline: "none", boxSizing: "border-box" }} />
           </div>
           <div style={{ marginBottom: 8 }}>
             <label style={{ fontSize: 11, color: MUTED, display: "block", marginBottom: 4 }}>Password</label>
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder={mode === "signup" ? "Min 6 characters" : "Your password"}
               onKeyDown={e => { if (e.key === "Enter") handleSubmit(); }}
-              style={{ width: "100%", background: DARK, border: \`1px solid ${CARD_BORDER}\`, borderRadius: 8, padding: "10px 12px", color: WHITE, fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+              style={{ width: "100%", background: DARK, border: `1px solid ${CARD_BORDER}`, borderRadius: 8, padding: "10px 12px", color: WHITE, fontSize: 14, outline: "none", boxSizing: "border-box" }} />
           </div>
           {mode === "login" && (
             <div style={{ marginBottom: 16, textAlign: "right" }}>

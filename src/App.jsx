@@ -66,8 +66,26 @@ const RESISTANCE_LEVELS = [
 ];
 
 function calcM(a, r) { return a * (1 + r / 5); }
-function fmtD(s) { return new Date(s + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }); }
-function getToday() { return new Date().toISOString().split("T")[0]; }
+
+// Fixed: Uses your local timezone (CST) instead of UTC
+function getToday() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+// Improved: More reliable date formatting
+function fmtD(s) {
+  if (!s) return "";
+  const date = new Date(s + "T12:00:00");
+  return date.toLocaleDateString("en-US", { 
+    month: "short", 
+    day: "numeric" 
+  });
+}
+
 function gk() { return "a" + Date.now().toString(36) + Math.random().toString(36).slice(2, 5); }
 function pMax(actions) { return (actions || []).reduce((s, a) => s + a.pts, 0); }
 

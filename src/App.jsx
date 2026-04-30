@@ -3,8 +3,8 @@ import { createClient } from "@supabase/supabase-js";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from "recharts";
 
 const supabase = createClient(
-  "https://ybtbobprbuskrjklatsu.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlidGJvYnByYnVza3Jqa2xhdHN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0NTE0NjIsImV4cCI6MjA5MDAyNzQ2Mn0.vuGWvz0gXaE3suCgc0_OGuruALVID_RcShHtqYuEdII"
+  import.meta.env.VITE_supabase_url,
+  import.meta.env.VITE_supabase_anon_key
 );
 
 const NAVY = "#001139";

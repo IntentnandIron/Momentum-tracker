@@ -160,8 +160,8 @@ function AuthScreen({ onAuth }) {
             </div>
           )}
           {mode === "signup" && <div style={{ height: 8 }} />}
-          {error && <div style={{ fontSize: 12, color: RED, marginBottom: 12, padding: "8px 10px", background: \`${RED}15\`, borderRadius: 6, lineHeight: 1.5 }}>{error}</div>}
-          {message && <div style={{ fontSize: 12, color: GREEN, marginBottom: 12, padding: "8px 10px", background: \`${GREEN}15\`, borderRadius: 6, lineHeight: 1.5 }}>{message}</div>}
+          {error && <div style={{ fontSize: 12, color: RED, marginBottom: 12, padding: "8px 10px", background: `${RED}15`, borderRadius: 6, lineHeight: 1.5 }}>{error}</div>}
+          {message && <div style={{ fontSize: 12, color: GREEN, marginBottom: 12, padding: "8px 10px", background: `${GREEN}15`, borderRadius: 6, lineHeight: 1.5 }}>{message}</div>}
           <button onClick={handleSubmit} disabled={loading || !email || !password}
             style={{ width: "100%", padding: 12, background: GOLD, color: NAVY, border: "none", borderRadius: 8, fontSize: 14, fontWeight: 800, letterSpacing: "0.06em", textTransform: "uppercase", cursor: loading ? "default" : "pointer", opacity: loading ? 0.6 : 1 }}>
             {loading ? "..." : mode === "login" ? "Sign In" : "Create Account"}
